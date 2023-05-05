@@ -1,0 +1,53 @@
+@media (max-width: $viewport-tablet) and (min-width:$viewport-m+1px) {
+  .filters {
+    &__container {
+      //margin-top: 24px;
+      //font-weight: 400;
+      //font-size: 16px;
+      //line-height: 32px;
+      //color: #000000;
+      //p {
+      //  margin: 0;
+      //}
+      //.box1 {
+      //  .item {
+      //    display: flex;
+      //    align-items: center;
+      //    gap: 18px;
+      //  }
+      //}
+      .filters__table {
+        //margin-top: 25px;
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        width: 351px;
+        //table,
+        //td,
+        //th {
+        //  border: 1px solid #eeeeee;
+        //}
+        //table {
+        //  width: 100%;
+        //  border-collapse: collapse;
+        //  // border-radius: 6px;
+        //}
+        //th {
+        //  background: #eeeeee;
+        //  border: 1px solid white;
+        //  border-right: 1px solid #eeeeee;
+        //}
+        //.th1 {
+        //  border-radius: 6px 0px 0px 0px;
+        //}
+        //.th3 {
+        //  border-radius: 0px 8px 0px 0px;
+        //  border-right: 1px solid white;
+        //}
+        td{
+          background-color: white;
+        }
+      }
+    }
+  }
+}

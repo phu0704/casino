@@ -1,0 +1,2097 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+
+* {
+  transition: all 0.3s linear, hover 0s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #1e60e1 !important;
+  color: white !important;
+}
+button:hover img {
+  filter: brightness(10000%) !important;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: black;
+  font-family: "Lato", serif;
+  font-style: normal;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.wrapper__container {
+  background-color: #f5f5f5;
+  width: 1158px;
+}
+.wrapper__sidebar {
+  transition: all 0.3s linear;
+}
+
+.p-size26 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 24px;
+}
+
+.hidden-option {
+  height: 0 !important;
+  padding: 0 !important;
+  opacity: 0;
+}
+
+.sidebar-show {
+  padding: 0;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s linear, opacity 0.15s linear;
+}
+
+.box-hidden {
+  height: 0 !important;
+  visibility: hidden;
+}
+.box-hidden .container {
+  opacity: 0;
+}
+
+.answer-hidden {
+  height: 0 !important;
+  opacity: 0;
+}
+.answer-hidden tr {
+  display: none;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(/fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Oswald;
+  src: url(/fonts/Oswald/Oswald-Medium.ttf);
+}
+.sidebar {
+  width: 282px;
+  background: #0c1245;
+  height: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s linear, opacity 0.05s linear;
+}
+.sidebar__logo {
+  width: 282px;
+  height: 194px;
+  margin-left: -16px;
+  background: linear-gradient(180deg, #193387 0%, #0b1144 100%);
+}
+.sidebar__logo img {
+  margin-top: 24px;
+  margin-left: 48px;
+  width: 184px;
+  height: 122px;
+}
+.sidebar__crossbar {
+  width: 250px;
+  height: 6px;
+  margin: 0 auto;
+  background: rgba(12, 18, 69, 0.01);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+}
+.sidebar__casinos .sidebar__select, .sidebar__bonuses .sidebar__select, .sidebar__games .sidebar__select, .sidebar__blog .sidebar__select {
+  height: 56px;
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  color: white;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+}
+.sidebar__casinos .sidebar__select .img-logo, .sidebar__bonuses .sidebar__select .img-logo, .sidebar__games .sidebar__select .img-logo, .sidebar__blog .sidebar__select .img-logo {
+  padding-top: 16px;
+  width: 24px;
+  height: 24px;
+}
+.sidebar__casinos .sidebar__select p, .sidebar__bonuses .sidebar__select p, .sidebar__games .sidebar__select p, .sidebar__blog .sidebar__select p {
+  color: white;
+  position: absolute;
+  top: 17px;
+  left: 40px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.sidebar__casinos .sidebar__select .img-arrow, .sidebar__bonuses .sidebar__select .img-arrow, .sidebar__games .sidebar__select .img-arrow, .sidebar__blog .sidebar__select .img-arrow {
+  position: absolute;
+  top: 25px;
+  width: 16px;
+  right: 6px;
+  cursor: pointer;
+}
+.sidebar__casinos .intro__active--option, .sidebar__bonuses .intro__active--option, .sidebar__games .intro__active--option, .sidebar__blog .intro__active--option {
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+.sidebar__casinos .intro__active--option {
+  height: 186px;
+}
+.sidebar__bonuses .intro__active--option {
+  height: 220px;
+}
+.sidebar__games .intro__active--option {
+  height: 260px;
+}
+
+.header .container .header__container {
+  width: 100%;
+  height: 194px;
+  box-sizing: border-box;
+  position: relative;
+}
+.header .container .header__container .header__path {
+  width: 236px;
+  height: 24px;
+  padding-top: 18px;
+  padding-left: 17px;
+  display: flex;
+  justify-content: space-around;
+}
+.header .container .header__container .header__path img {
+  cursor: pointer;
+}
+.header .container .header__container .header__path img:hover {
+  filter: brightness(200%);
+  transform: scale(1.3);
+}
+.header .container .header__container .header__path p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #111111;
+  margin: 0;
+  display: inline;
+}
+.header .container .header__container .header__path .header__logo--mobile {
+  display: none;
+}
+.header .container .header__container .header__path .header__logo--tablet {
+  display: none;
+}
+.header .container .header__container .header__recommend {
+  position: absolute;
+  top: 70px;
+  left: 54px;
+  width: 474px;
+  height: 47px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 47px;
+  text-transform: uppercase;
+  color: #000000;
+}
+.header .container .header__container .header__recommend p {
+  display: inline;
+}
+.header .container .header__container .header__recommend .header__recommend--casinos {
+  color: #1e60e1;
+}
+.header .container .header__container .header__tab {
+  position: absolute;
+  top: 147px;
+  left: 54px;
+  height: 44px;
+}
+.header .container .header__container .header__tab button {
+  height: 44px;
+  border: 0;
+  border-radius: 6px 6px 0px 0px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: #111111;
+  background-color: white;
+  cursor: pointer;
+}
+.header .container .header__container .header__tab .selected {
+  background-color: #1e60e1;
+  color: white;
+}
+.header .container .header__container .header__crossbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #1e60e1;
+}
+.header .container .header__container .header__language {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 8px;
+  right: 34px;
+  width: 103px;
+  height: 40px;
+}
+.header .container .header__container .header__language select {
+  border: 0;
+}
+
+.intro {
+  padding: 0 54px;
+  position: relative;
+  transition: all 2s linear;
+}
+.intro .intro__content {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111111;
+  position: relative;
+  overflow: hidden;
+  height: 112px;
+}
+.intro .intro__content p {
+  margin-bottom: 0;
+}
+.intro .intro__content .intro__coating {
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  height: 25px;
+  background: #f2f3f5;
+  filter: blur(5px);
+}
+.intro .intro__show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #1e60e1;
+  z-index: 3;
+  width: 100px;
+  margin: 0 auto;
+}
+.intro .intro__show-more p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 87px;
+  height: 20px;
+}
+.intro .intro__show-more img {
+  width: 10px;
+  height: 5.84px;
+  transition: all 0.05s;
+}
+.intro .intro__show-more:hover {
+  color: red;
+}
+.intro .intro__active {
+  padding-top: 49px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+}
+.intro .intro__active .intro__active--option {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  height: 28px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding-left: 12px;
+  padding-right: 8px;
+}
+.intro .intro__active .intro__active--casino {
+  padding-left: 8px;
+}
+.intro .intro__active .intro__active--reset {
+  width: 112px;
+  height: 28px;
+  background-color: white;
+  border: 1px solid #1e60e1;
+  border-radius: 6px;
+  margin-left: 4px;
+  color: #1e60e1;
+  padding: 4px 14px;
+  box-sizing: border-box;
+}
+.intro .intro__active .intro__active--reset p {
+  margin: 0;
+  width: 90px;
+  height: 19px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.intro .intro__active .intro__active--setting {
+  display: flex;
+  align-items: center;
+  width: 107px;
+  height: 28px;
+  border-radius: 6px;
+  position: absolute;
+  right: 0;
+  padding: 4px 12px 5px 12px;
+  box-sizing: border-box;
+}
+.intro .intro__active .intro__active--setting-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1e60e1;
+  opacity: 0.08;
+  border-radius: 6px;
+}
+.intro .intro__active .intro__active--setting p {
+  margin-left: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1e60e1;
+}
+.intro .intro__showing {
+  padding-top: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.intro .intro__showing p {
+  margin: 0;
+  padding: 16px 0 15px 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* #111111 */
+  color: #111111;
+}
+.intro .intro__showing .intro__showing--sort {
+  width: 169px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 7px 13px 6px 13px;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  color: #111111;
+}
+
+.bookie {
+  padding: 0 54px;
+}
+.bookie .container .bookie__container .bookie__box {
+  position: relative;
+  margin-top: 16px;
+  display: flex;
+  background-color: white;
+  border: 1px solid #e9ebee;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+.bookie .container .bookie__container .bookie__box .box__left {
+  padding: 24px;
+  background: #161735;
+  border: 1px solid #e9ebee;
+  border-radius: 6px 0 0 6px;
+}
+.bookie .container .bookie__container .bookie__box .box__right {
+  width: 100%;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid #e9ebee;
+  border-radius: 0 0 6px 0;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title {
+  display: flex;
+  padding-left: 24px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 41px;
+  text-transform: uppercase;
+  color: #111111;
+  display: inline;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__australia {
+  display: none;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__stt {
+  color: #1e60e1;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  padding-right: 25px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured,
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106px;
+  height: 28px;
+  gap: 9.87px;
+  background: #f7bf31;
+  border-radius: 100px;
+  padding: 5px 12px;
+  box-sizing: border-box;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured p,
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__ribbon p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: white;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__ribbon {
+  width: 108px;
+  background: #76c344;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect .title {
+  padding: 0;
+  color: #76c344;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #111111;
+  padding: 16px 24px 0 24px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__title .box__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__title .box__item .title__item--chat {
+  padding: 0 5px 0 5px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__title .box__item p {
+  margin: 0;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor {
+  height: 128px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor ul {
+  margin: 0;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift {
+  position: relative;
+  width: 164px;
+  height: 149px;
+  background: #fefafb;
+  border: 5px solid #e8317e;
+  box-shadow: 0px 10px 12px rgba(232, 49, 126, 0.08);
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 32px 20px 51px 21px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 12px;
+  left: -20px;
+  background: #e8317e;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 80px;
+  height: 26px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  background: #e8317e;
+  border-radius: 0px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+  width: 123px;
+  height: 66px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #e8317e;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content .gift-content-hidden {
+  display: none;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--tvc {
+  width: 75px;
+  height: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1e60e1;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer {
+  padding: 3px 24px 24px 24px;
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer button {
+  background: rgba(30, 96, 225, 0.08);
+  border: 1px solid #e9ebee;
+  border-radius: 6px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8.59px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1e60e1;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino {
+  padding: 13px 56px 12px 55px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .review {
+  padding: 13px 49px 12px 49px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails {
+  padding: 13px 17px 12px 17px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails img {
+  transform: rotate(0);
+  transition: transform 0s;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails-show img {
+  transform: rotate(180deg);
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--footer .selected {
+  color: white;
+  background-color: #1e60e1;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden {
+  height: 251px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container {
+  padding: 24px 85px 24px 24px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e9ebee;
+  border-radius: 6px 6px 0px 0px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #111111;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item img {
+  width: 24px;
+  height: 24px;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item p {
+  padding-left: 12px;
+  display: inline;
+}
+.bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container .box__item li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+.bookie .container .bookie__container .bookie__unibet .box__left img,
+.bookie .container .bookie__container .bookie__dafabet .box__left img,
+.bookie .container .bookie__container .bookie__happi .box__left img {
+  border-radius: 10px;
+}
+.bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift,
+.bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift,
+.bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+  border: 5px solid #f6bf31;
+}
+.bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+.bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+.bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+  background-color: #f6bf31;
+}
+.bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+.bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+.bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+  background-color: #f6bf31;
+}
+.bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+.bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+.bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+  color: #0c1245;
+}
+.bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+  height: 191px;
+}
+.bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+  height: 110px;
+}
+.bookie .container .bookie__container .bookie__unibet .box__left {
+  background-color: #147b44;
+}
+.bookie .container .bookie__container .bookie__dafabet .box__left {
+  background-color: #ae0001;
+}
+.bookie .container .bookie__container .bookie__happi .box__left {
+  background-color: #2a385b;
+}
+
+.show18 .container .show18__container {
+  padding: 40px 54px 0 54px;
+}
+.show18 .container .show18__container .show18__btn {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+.show18 .container .show18__container .show18__btn button {
+  width: 398px;
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid #1e60e1;
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #1e60e1;
+}
+.show18 .container .show18__container .show18__btn button:hover {
+  background-color: #1e60e1;
+  color: white;
+}
+.show18 .container .show18__container .show18__container--pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination .pagination__btn {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #444444;
+  margin-left: 8px;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination .pagination__btn1 {
+  margin: 0;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination .selected {
+  background-color: #1e60e1;
+  color: white;
+}
+.show18 .container .show18__container .show18__container--pagination .showResults {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #111111;
+}
+.show18 .container .show18__container .show18__container--pagination .pagination-hidden {
+  display: none;
+}
+
+.infor .container {
+  padding: 61px 54px 0 54px;
+  border-radius: 6px;
+}
+.infor .container .infor__box {
+  display: flex;
+  gap: 24px;
+  background-color: white;
+}
+.infor .container .infor__box--left {
+  padding: 19px 0 0 24px;
+  width: 728px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111111;
+  height: 900px;
+  overflow: scroll;
+}
+.infor .container .infor__box--left #choose-img,
+.infor .container .infor__box--left #criteria-img,
+.infor .container .infor__box--left #writing-img,
+.infor .container .infor__box--left #sort-img,
+.infor .container .infor__box--left #find-img,
+.infor .container .infor__box--left #filters-img,
+.infor .container .infor__box--left #faq-img {
+  display: none;
+}
+.infor .container .infor__box--right {
+  width: 258px;
+  height: 192px;
+  margin: 16px 16px 0 0;
+  background: #f2f3f5;
+  border-radius: 6px;
+  position: sticky;
+  top: 0;
+}
+.infor .container .infor__box--right .box__right--container {
+  padding: 15px 22px 17px 14px;
+}
+.infor .container .infor__box--right .box__right--container p {
+  margin: 0 0 16px 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: #111111;
+}
+.infor .container .infor__box--right .box__right--container .selected {
+  color: #1e60e1;
+  border-left: 3px solid #1e60e1;
+  padding-left: 14px;
+  margin-left: -14px;
+}
+
+.criteria {
+  margin-top: 24px;
+  padding: 13px 30px 13px 22px;
+  border-radius: 6px;
+}
+
+.sort .sort__content--note {
+  background: #F2F3F5;
+  border-radius: 6px;
+}
+.sort .sort__content--note .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 18px 14px 11px 22px;
+}
+.sort .sort__content--note .container p {
+  margin: 0;
+}
+
+.filters {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
+}
+.filters .filters__title {
+  padding: 24px 0;
+}
+.filters p {
+  margin: 0;
+}
+.filters .filters__content--checked {
+  padding-top: 24px;
+}
+.filters .content__checked--item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.filters .filters__content--table {
+  margin-top: 25px;
+}
+.filters .filters__content--table table,
+.filters .filters__content--table td,
+.filters .filters__content--table th {
+  border: 1px solid #eeeeee;
+}
+.filters .filters__content--table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.filters .filters__content--table th {
+  background: #eeeeee;
+  border: 1px solid white;
+  border-right: 1px solid #eeeeee;
+}
+.filters .filters__content--table .th1 {
+  border-radius: 6px 0 0 0;
+}
+.filters .filters__content--table .th3 {
+  border-radius: 0 8px 0 0;
+  border-right: 1px solid white;
+}
+
+.faq {
+  margin-top: 40px;
+  padding-bottom: 62px;
+}
+.faq-container .faq__content {
+  padding-top: 24px;
+}
+.faq-container .faq__content p {
+  margin-bottom: 22px;
+}
+.faq-container p {
+  margin: 0;
+}
+.faq-container .faq__table table {
+  border: 1px solid #f8f8f8;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 6px;
+}
+.faq-container .faq__table table th {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 12px 13px 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+.faq-container .faq__table table td {
+  background-color: white;
+  padding: 12px 41px 20px 24px;
+}
+.faq-container .faq__table table tbody {
+  height: 128px;
+}
+
+footer .footer {
+  padding: 56px 54px 0 54px;
+}
+footer .footer-container .footer__crossbar {
+  width: 100%;
+  height: 3px;
+  background: #bbbbbb;
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+}
+footer .footer-container .footer__more {
+  display: none;
+}
+footer .footer-container .footer__crossbar--hidden {
+  display: none;
+}
+footer .footer-container .footer__box {
+  margin-top: 46px;
+  display: flex;
+  justify-content: space-between;
+  gap: 61px;
+}
+footer .footer-container .footer__box--left {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+footer .footer-container .footer__box--left ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+}
+footer .footer-container .footer__box--left ul li {
+  border-left: 5px solid #cccccc;
+  padding-left: 15px;
+}
+footer .footer-container .footer__box--left ul #contact {
+  border: 0;
+  padding: 0;
+}
+footer .footer-container .footer__box--left ul .box__left--selected {
+  color: #1e60e1;
+}
+footer .footer-container .footer__box--left .box__left--content {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #999999;
+}
+footer .footer-container .footer__crossbar--hidden {
+  display: none;
+}
+footer .footer-container .footer__box--hidden {
+  display: none;
+}
+
+@media (max-width: 769px) and (min-width: 377px) {
+  .sidebar {
+    z-index: 2;
+    width: 40vw;
+    height: 100%;
+  }
+  .sidebar__logo {
+    width: 40vw;
+    margin: 0 0 0 -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar__logo img {
+    margin: 0;
+    width: 30vw;
+  }
+  .coating {
+    width: 60vw;
+    background-color: black;
+    z-index: 3;
+    opacity: 0.3;
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  .header .container {
+    width: 100vw;
+  }
+  .header .container .header__container {
+    height: 190px;
+  }
+  .header .container .header__container .header__path {
+    background-color: #0c1245;
+    padding: 16px 0 0 12px;
+    position: relative;
+    width: 100vw;
+    height: 56px;
+    box-sizing: border-box;
+  }
+  .header .container .header__container .header__path--open {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    filter: brightness(1000%);
+  }
+  .header .container .header__container .header__path--url {
+    position: absolute;
+    top: 69px;
+    left: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .header .container .header__container .header__path .header__logo--mobile {
+    display: none;
+  }
+  .header .container .header__container .header__path .header__logo--tablet {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 55px;
+  }
+  .header .container .header__container .header__recommend {
+    position: absolute;
+    top: 100px;
+    left: 28px;
+    width: 331px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+  }
+  .header .container .header__container .header__tab {
+    width: 95vw;
+    overflow: clip;
+    position: absolute;
+    bottom: 0;
+    left: 28px;
+  }
+  .header .container .header__container .header__tab button {
+    margin-top: 5px;
+    height: 35px;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: #111111;
+    background-color: white;
+    cursor: pointer;
+  }
+  .header .container .header__container .header__tab .selected {
+    background-color: #1e60e1;
+    color: white;
+  }
+  .header .container .header__container .header__language {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 8px;
+    right: 12px;
+    width: 103px;
+    height: 40px;
+  }
+  .header .container .header__container .header__language select {
+    color: white;
+    background-color: #0c1245;
+    border: 0;
+  }
+  .header .container .header__container .header__language .search {
+    filter: brightness(100000%);
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  .intro {
+    padding: 0 28px;
+  }
+  .intro .intro__content {
+    height: 96px;
+  }
+  .intro .intro__content .intro__coating {
+    bottom: 0px;
+    width: 100%;
+    filter: blur(6px);
+  }
+  .intro .full-content {
+    height: auto;
+  }
+  .intro .intro__showmore {
+    top: 90px;
+    left: 139px;
+  }
+  .intro .appear {
+    top: 330px;
+  }
+  .intro .intro__active {
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-top: 35px;
+    padding: 0 40vw 0 0;
+  }
+  .intro .intro__active .intro__active--option {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+    height: 28px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 8px;
+  }
+  .intro .intro__active .intro__active--casino {
+    padding-left: 0;
+  }
+  .intro .intro__active .intro__active--reset {
+    width: 112px;
+    height: 28px;
+    background-color: white;
+    border: 1px solid #1e60e1;
+    border-radius: 6px;
+    margin-left: 4px;
+    color: #1e60e1;
+    padding: 4px 14px;
+    box-sizing: border-box;
+  }
+  .intro .intro__active .intro__active--reset p {
+    margin: 0;
+    width: 90px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .intro .intro__active .intro__active--setting {
+    display: flex;
+    align-items: center;
+    width: 107px;
+    height: 28px;
+    border-radius: 6px;
+    position: absolute;
+    top: 16px;
+    right: 0;
+    padding: 4px 12px 5px 12px;
+    box-sizing: border-box;
+  }
+  .intro .intro__active .intro__active--setting-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e60e1;
+    opacity: 0.08;
+    border-radius: 6px;
+  }
+  .intro .intro__active .intro__active--setting p {
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1e60e1;
+  }
+  .intro .intro__showing p {
+    width: 482px;
+  }
+  .intro .intro__showing .intro__showing--sort {
+    width: 169px;
+    height: 32px;
+    padding: 0 13px;
+    align-items: center;
+  }
+  .intro .intro__showing .intro__showing--sort P {
+    padding: 0;
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  .bookie {
+    padding: 0 28px;
+  }
+  .bookie .container .bookie__container .bookie__box {
+    width: 100%;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right {
+    width: 521px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header {
+    width: 518px;
+    margin-top: 9px;
+    height: 114px;
+    flex-wrap: wrap;
+    border: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title {
+    display: flex;
+    width: 230px;
+    flex-wrap: wrap;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title p {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 41px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__australia {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__stt {
+    color: #1e60e1;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor {
+    padding: 0 0 0 16px;
+    width: 100vw;
+    justify-content: start;
+    gap: 7px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect {
+    width: 135px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container {
+    flex-wrap: wrap;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    width: 123px;
+    height: 66px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer {
+    padding: 17px 20px 17px 20px;
+    justify-content: space-between;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino {
+    display: flex;
+    justify-content: center;
+    width: 169px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .review {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 105px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden {
+    height: 463px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container {
+    flex-wrap: wrap;
+    padding: 20px 15px 20px 32px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container p {
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container ul {
+    padding: 0 0 0 15px;
+    margin: 12px 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container li {
+    line-height: 0px;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__left img,
+  .bookie .container .bookie__container .bookie__dafabet .box__left img,
+  .bookie .container .bookie__container .bookie__happi .box__left img {
+    border-radius: 10px;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    border: 2px solid #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    color: #0c1245;
+  }
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    height: 191px;
+  }
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    height: 110px;
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  .infor .container {
+    padding: 20px 0 0 0;
+    position: relative;
+  }
+  .infor .container .infor__box {
+    flex-direction: column-reverse;
+  }
+  .infor .container .infor__box--left {
+    padding: 0 28px;
+  }
+  .infor .container .infor__box--left section {
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    margin: 0;
+  }
+  .infor .container .infor__box--left section .choose__title,
+  .infor .container .infor__box--left section .criteria__title,
+  .infor .container .infor__box--left section .writing__title,
+  .infor .container .infor__box--left section .sort__title,
+  .infor .container .infor__box--left section .find__title,
+  .infor .container .infor__box--left section .filters__title,
+  .infor .container .infor__box--left section .faq__title {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .infor .container .infor__box--left section .choose__title p,
+  .infor .container .infor__box--left section .criteria__title p,
+  .infor .container .infor__box--left section .writing__title p,
+  .infor .container .infor__box--left section .sort__title p,
+  .infor .container .infor__box--left section .find__title p,
+  .infor .container .infor__box--left section .filters__title p,
+  .infor .container .infor__box--left section .faq__title p {
+    margin: 0;
+  }
+  .infor .container .infor__box--left #choose-img,
+  .infor .container .infor__box--left #criteria-img,
+  .infor .container .infor__box--left #writing-img,
+  .infor .container .infor__box--left #sort-img,
+  .infor .container .infor__box--left #find-img,
+  .infor .container .infor__box--left #filters-img,
+  .infor .container .infor__box--left #faq-img {
+    display: none;
+  }
+  .infor .container .infor__box--right {
+    display: block;
+    width: 712px;
+    margin: 0 auto;
+    margin-top: 34px;
+    position: relative;
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  .filters__container .filters__table {
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    width: 351px;
+  }
+  .filters__container .filters__table td {
+    background-color: white;
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  .faq-container .faq__table {
+    display: none;
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  footer .footer {
+    padding: 56px 28px 0 28px;
+  }
+  footer .footer-container .footer__box {
+    flex-direction: column;
+    position: relative;
+  }
+  footer .footer-container .footer__box--left {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  footer .footer-container .footer__box--left ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+  }
+  footer .footer-container .footer__box--left ul li {
+    border-left: 5px solid #cccccc;
+    padding-left: 15px;
+  }
+  footer .footer-container .footer__box--left ul #contact {
+    border: 0;
+    padding: 0;
+  }
+  footer .footer-container .footer__box--left ul .box__left--selected {
+    color: #1e60e1;
+  }
+  footer .footer-container .footer__box--left .box__left--content {
+    padding-top: 100px;
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #999999;
+  }
+  footer .footer-container .footer__box--right {
+    position: absolute;
+    bottom: 90px;
+  }
+  footer .footer-container .footer__crossbar--hidden {
+    display: none;
+  }
+  footer .footer-container .footer__box--hidden {
+    display: none;
+  }
+}
+@media (max-width: 769px) and (min-width: 377px) {
+  .wrapper {
+    width: 100vw;
+    position: relative;
+  }
+  .wrapper__container {
+    width: 100vw;
+  }
+  .wrapper__sidebar {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+  }
+  .p-size26 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    display: inline;
+  }
+  .hidden-option {
+    display: none;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .sidebar-show {
+    position: absolute;
+    padding: 0 !important;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@media (max-width: 376px) {
+  .sidebar {
+    z-index: 2;
+    width: 60vw;
+    height: 100%;
+  }
+  .sidebar__logo {
+    width: 60vw;
+    margin: 0 0 0 -16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar__logo img {
+    margin: 0;
+    width: 40vw;
+  }
+  .coating {
+    width: 40vw;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.3;
+  }
+}
+@media (max-width: 376px) {
+  .header .container {
+    width: 100vw;
+  }
+  .header .container .header__container {
+    height: 190px;
+  }
+  .header .container .header__container .header__path {
+    background-color: #0c1245;
+    padding: 16px 0px 0px 12px;
+    position: relative;
+    width: 100vw;
+    height: 56px;
+    box-sizing: border-box;
+  }
+  .header .container .header__container .header__path--open {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    filter: brightness(1000%);
+  }
+  .header .container .header__container .header__path--url {
+    position: absolute;
+    top: 69px;
+    left: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .header .container .header__container .header__path .header__logo--mobile {
+    display: block;
+    position: absolute;
+    left: 55px;
+  }
+  .header .container .header__container .header__recommend {
+    position: absolute;
+    top: 100px;
+    left: 12px;
+    width: 331px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+  }
+  .header .container .header__container .header__tab {
+    width: 95vw;
+    height: auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+  }
+  .header .container .header__container .header__tab button {
+    margin-right: 7px;
+    height: 100%;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: #111111;
+    background-color: white;
+    cursor: pointer;
+  }
+  .header .container .header__container .header__tab .selected {
+    background-color: #1e60e1;
+    color: white;
+  }
+  .header .container .header__container .header__language {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 8px;
+    right: 12px;
+    width: 103px;
+    height: 40px;
+  }
+  .header .container .header__container .header__language select {
+    color: white;
+    background-color: #0c1245;
+    border: 0;
+  }
+  .header .container .header__container .header__language .search {
+    filter: brightness(100000%);
+  }
+}
+@media (max-width: 376px) {
+  .intro {
+    padding: 0 12px;
+  }
+  .intro .intro__content {
+    height: 96px;
+  }
+  .intro .intro__content .intro__coating {
+    bottom: 0px;
+    width: 100%;
+    filter: blur(6px);
+  }
+  .intro .full-content {
+    height: auto;
+  }
+  .intro .intro__showmore {
+    top: 90px;
+    left: 139px;
+  }
+  .intro .appear {
+    top: 330px;
+  }
+  .intro .intro__active {
+    display: none;
+  }
+  .intro .intro__active .intro__active--option {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 12px;
+    height: 28px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 8px;
+  }
+  .intro .intro__active .intro__active--casino {
+    padding-left: 8px;
+  }
+  .intro .intro__active .intro__active--reset {
+    width: 112px;
+    height: 28px;
+    background-color: white;
+    border: 1px solid #1e60e1;
+    border-radius: 6px;
+    margin-left: 4px;
+    color: #1e60e1;
+    padding: 4px 14px;
+    box-sizing: border-box;
+  }
+  .intro .intro__active .intro__active--reset p {
+    margin: 0;
+    width: 90px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .intro .intro__active .intro__active--setting {
+    display: flex;
+    align-items: center;
+    width: 107px;
+    height: 28px;
+    border-radius: 6px;
+    position: absolute;
+    right: 0;
+    padding: 4px 12px 5px 12px;
+    box-sizing: border-box;
+  }
+  .intro .intro__active .intro__active--setting-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e60e1;
+    opacity: 0.08;
+    border-radius: 6px;
+  }
+  .intro .intro__active .intro__active--setting p {
+    margin-left: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1e60e1;
+  }
+  .intro .intro__showing .intro__showing--sort {
+    display: none;
+  }
+}
+@media (max-width: 376px) {
+  .bookie {
+    padding: 0 12px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__left {
+    width: 0;
+    padding: 0;
+    border: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__left img {
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    width: 39px;
+    height: 39px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header {
+    margin-top: 9px;
+    height: 114px;
+    flex-wrap: wrap;
+    border: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title {
+    display: flex;
+    padding-left: 62px;
+    width: 230px;
+    flex-wrap: wrap;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title p {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__australia {
+    display: inline;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .title .title__stt {
+    color: #1e60e1;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor {
+    padding: 0;
+    width: 100vw;
+    justify-content: start;
+    gap: 7px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured {
+    position: absolute;
+    top: 19px;
+    right: 13.88px;
+    background-color: white;
+    border-radius: 0;
+    width: 14px;
+    height: 18px;
+    padding: 0;
+    background-image: url("/img/bookie/star-y-w.png");
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured img {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__featured p {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--header .infor .infor__perfect {
+    width: 135px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container {
+    flex-wrap: wrap;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__infor {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift {
+    padding: 35px 33px 14px 19px;
+    width: 327px;
+    height: 93px;
+    border: 2px solid #e8317e;
+    margin-left: -12px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+    top: -2px;
+    left: -4px;
+    border-radius: 12px 0px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    width: 291px;
+    height: 44px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--content .gift-content-hidden {
+    display: inline;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--body .container .box__container .box__gift .box__gift--tvc {
+    position: absolute;
+    top: 5px;
+    right: 38px;
+    padding: 0;
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer {
+    padding: 17px 12px 17px 12px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino {
+    padding: 10px 31px 11px 30px;
+    width: 94px;
+    height: 40px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .visitCasino p {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .review {
+    padding: 10px 23px 11px 20px;
+    width: 95px;
+    height: 40px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails {
+    padding: 10px 0 11px 26px;
+    width: 112px;
+    height: 40px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--footer .moreDetails p {
+    width: 39px;
+    height: 19px;
+    overflow: hidden;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden {
+    height: 463px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container {
+    flex-wrap: wrap;
+    padding: 20px 15px 20px 15px;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container p {
+    margin: 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container ul {
+    padding: 0 0 0 15px;
+    margin: 12px 0;
+  }
+  .bookie .container .bookie__container .bookie__box .box__right .box__right--hidden .container li {
+    line-height: 0px;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__left img,
+  .bookie .container .bookie__container .bookie__dafabet .box__left img,
+  .bookie .container .bookie__container .bookie__happi .box__left img {
+    border-radius: 10px;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    border: 2px solid #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--circle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--circle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--rectangle {
+    background-color: #f6bf31;
+  }
+  .bookie .container .bookie__container .bookie__unibet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__dafabet .box__right .box__right--body .container .box__container .box__gift .box__gift--content,
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift .box__gift--content {
+    color: #0c1245;
+  }
+  .bookie .container .bookie__container .bookie__happi {
+    display: none;
+  }
+  .bookie .container .bookie__container .bookie__happi .box__right .box__right--body .container .box__container .box__gift {
+    height: 93px;
+  }
+}
+@media (max-width: 376px) {
+  .show18 .container .show18__container {
+    padding: 30px 0 0 0;
+  }
+  .show18 .container .show18__container .show18__btn button {
+    width: 351px;
+    height: 44px;
+  }
+  .show18 .container .show18__container .show18__container--pagination {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination {
+    display: none;
+  }
+  .show18 .container .show18__container .show18__container--pagination .showResults {
+    font-size: 14px;
+    line-height: 17px;
+    width: 189px;
+    height: 17px;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden {
+    padding-top: 14px;
+    display: block;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container button {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 9.3px;
+    justify-content: center;
+    background: #c3cfea;
+    border-radius: 6px;
+    border: 0;
+    color: #7085b5;
+  }
+  .show18 .container .show18__container .show18__container--pagination .pagination-hidden__container .btn-selected {
+    background-color: #1e60e1;
+    color: white;
+  }
+}
+@media (max-width: 376px) {
+  .infor .container {
+    padding: 20px 0 0 0;
+    position: relative;
+  }
+  .infor .container .infor__box--left {
+    padding: 0;
+    height: auto;
+    overflow: auto;
+  }
+  .infor .container .infor__box--left section {
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    margin: 0;
+  }
+  .infor .container .infor__box--left section .choose__title,
+  .infor .container .infor__box--left section .criteria__title,
+  .infor .container .infor__box--left section .writing__title,
+  .infor .container .infor__box--left section .sort__title,
+  .infor .container .infor__box--left section .find__title,
+  .infor .container .infor__box--left section .filters__title,
+  .infor .container .infor__box--left section .faq__title {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .infor .container .infor__box--left section .choose__title p,
+  .infor .container .infor__box--left section .criteria__title p,
+  .infor .container .infor__box--left section .writing__title p,
+  .infor .container .infor__box--left section .sort__title p,
+  .infor .container .infor__box--left section .find__title p,
+  .infor .container .infor__box--left section .filters__title p,
+  .infor .container .infor__box--left section .faq__title p {
+    margin: 0;
+  }
+  .infor .container .infor__box--left #choose-img,
+  .infor .container .infor__box--left #criteria-img,
+  .infor .container .infor__box--left #writing-img,
+  .infor .container .infor__box--left #sort-img,
+  .infor .container .infor__box--left #find-img,
+  .infor .container .infor__box--left #filters-img,
+  .infor .container .infor__box--left #faq-img {
+    display: block;
+  }
+  .infor .container .infor__box--right {
+    display: none;
+  }
+}
+@media (max-width: 376px) {
+  .filters__content--table .spent {
+    width: 85px !important;
+  }
+  .filters__content--table td {
+    background-color: white;
+  }
+}
+@media (max-width: 376px) {
+  .faq-container .faq__table {
+    display: none;
+  }
+}
+@media (max-width: 376px) {
+  footer .footer {
+    padding: 42px 0 0 0;
+  }
+  footer .footer-container .footer__crossbar {
+    width: 100%;
+    height: 3px;
+    background: #bbbbbb;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.05);
+  }
+  footer .footer-container .footer__more {
+    width: 79px;
+    height: 31px;
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  footer .footer-container .footer__more p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  footer .footer-container .footer__box {
+    display: none;
+  }
+  footer .footer-container .footer__crossbar--hidden {
+    display: block;
+  }
+  footer .footer-container .footer__box--hidden {
+    display: block;
+  }
+  footer .footer-container .footer__box--hidden .footer__box-container {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  footer .footer-container .footer__box--hidden .footer__box-container img {
+    width: 16px;
+    height: 16px;
+  }
+  footer .footer-container .footer__box--hidden .footer__box-container .filter, footer .footer-container .footer__box--hidden .footer__box-container .sort {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+}
+@media (max-width: 376px) {
+  .wrapper {
+    width: 100vw;
+    background-color: red;
+    position: relative;
+  }
+  .wrapper__container {
+    width: 100vw;
+  }
+  .wrapper__sidebar {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+  }
+  body {
+    background-color: black;
+    margin: 0;
+  }
+  .p-size26 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    display: inline;
+  }
+  .hidden-option {
+    display: none;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .sidebar-show {
+    position: absolute;
+    padding: 0 !important;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@media (max-width: 769px) {
+  .wrapper {
+    max-width: 100vw;
+    margin: 0 auto;
+  }
+  .wrapper-container {
+    width: 100vw;
+  }
+  body {
+    background-color: black;
+    margin: 0;
+  }
+  .p-size26 p {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 24px;
+  }
+  .hidden-option {
+    display: none;
+  }
+  .close-slidebar {
+    padding: 0 !important;
+    width: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: width 1s;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

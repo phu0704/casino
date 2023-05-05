@@ -1,0 +1,25 @@
+@media (max-width: $viewport-m) {
+  .sidebar {
+    z-index: 2;
+    width: 60vw;
+    height: 100%;
+    &__logo{
+      width: 60vw;
+      margin: 0 0 0 -16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        margin: 0;
+        width: 40vw;
+      }
+    }
+  }
+  .coating{
+    width: 40vw;
+    background-color: black;
+    //height: 200vw;
+    z-index: 2;
+    opacity: 0.3;
+  }
+}

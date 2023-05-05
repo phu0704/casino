@@ -1,0 +1,41 @@
+.faq {
+  margin-top: 40px;
+  padding-bottom: 62px;
+  &-container {
+    .faq__content {
+      padding-top: 24px;
+      p {
+        margin-bottom: 22px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    .faq__table {
+      table {
+        border: 1px solid #f8f8f8;
+        background-color: #f8f8f8;
+        border-radius: 6px;
+        width: 100%;
+        margin-top: 6px;
+        th {
+          display: flex;
+          justify-content: space-between;
+          padding: 13px 12px 13px 24px;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+        }
+        td {
+          background-color: white;
+          padding: 12px 41px 20px 24px;
+        }
+        tbody{
+          height: 128px;
+        }
+
+      }
+    }
+
+  }
+}

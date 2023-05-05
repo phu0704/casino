@@ -1,0 +1,55 @@
+.infor {
+  .container {
+    padding: 61px 54px 0 54px;
+    border-radius: 6px;
+    .infor__box {
+      display: flex;
+      gap: 24px;
+      background-color: white;
+      &--left {
+        padding: 19px 0 0 24px;
+        width: 728px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #111111;
+        height: 900px;
+        overflow: scroll;
+        #choose-img,
+        #criteria-img,
+        #writing-img,
+        #sort-img,
+        #find-img,
+        #filters-img,
+        #faq-img {
+          display: none;
+        }
+      }
+      &--right {
+        width: 258px;
+        height: 192px;
+        margin: 16px 16px 0 0;
+        background: #f2f3f5;
+        border-radius: 6px;
+        position: sticky;
+        //position: -webkit-sticky;
+        top: 0;
+        .box__right--container {
+          padding: 15px 22px 17px 14px;
+          p {
+            margin: 0 0 16px 0;
+            font-weight: 700;
+            font-size: 16px;
+            color: #111111;
+          }
+          .selected {
+            color: #1e60e1;
+            border-left: 3px solid #1e60e1;
+            padding-left: 14px;
+            margin-left: -14px;
+          }
+        }
+      }
+    }
+  }
+}

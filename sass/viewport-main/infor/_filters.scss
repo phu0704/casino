@@ -1,0 +1,46 @@
+.filters {
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000000;
+  .filters__title{
+    padding: 24px 0;
+  }
+  p {
+    margin:0;
+  }
+  .filters__content--checked{
+    padding-top: 24px;
+  }
+  .content__checked--item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+  }
+  .filters__content--table {
+    margin-top: 25px;
+    table,
+    td,
+    th {
+      border: 1px solid #eeeeee;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      // border-radius: 6px;
+    }
+    th {
+      background: #eeeeee;
+      border: 1px solid white;
+      border-right: 1px solid #eeeeee;
+    }
+    .th1 {
+      border-radius: 6px 0 0 0;
+    }
+    .th3 {
+      border-radius: 0 8px 0 0;
+      border-right: 1px solid white;
+    }
+  }
+}

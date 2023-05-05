@@ -1,0 +1,39 @@
+@media (max-width: $viewport-tablet) and (min-width:$viewport-m+1px) {
+  .wrapper {
+    width: 100vw;
+    position: relative;
+    &__container {
+      width: 100vw;
+    }
+    &__sidebar{
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      display: flex;
+    }
+  }
+  //body {
+  //  background-color: black;
+  //  margin: 0;
+  //}
+  .p-size26 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    display: inline;
+  }
+  .hidden-option {
+    display: none;
+  }
+  .hidden {
+    display: none !important;
+  }
+  .sidebar-show {
+    position: absolute;
+    padding: 0 !important;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    //transition: width 2s linear;
+  }
+}

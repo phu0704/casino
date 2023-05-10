@@ -23,6 +23,8 @@ button:hover{
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  position: relative;
+  align-items: stretch;
 
   &__container {
     background-color: #f5f5f5;
@@ -31,6 +33,11 @@ button:hover{
   &__sidebar{
     //width: auto;
     //width: 282px;
+    align-self: stretch;
+    //height: auto !important;
+    //height: 100%;
+    //background-color: red;
+    //background: #0c1245;
     transition: all 0.3s linear;
   }
 }

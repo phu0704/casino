@@ -1,11 +1,13 @@
 .sidebar {
   width: 282px;
-  background: #0c1245;
   height: 100%;
+  background: #0c1245;
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
   transition: all 0.3s linear,opacity 0.05s linear;
+
+
   &__logo {
     width: 282px;
     height: 194px;

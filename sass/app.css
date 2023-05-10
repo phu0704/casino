@@ -24,12 +24,15 @@ button:hover img {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  position: relative;
+  align-items: stretch;
 }
 .wrapper__container {
   background-color: #f5f5f5;
   width: 1158px;
 }
 .wrapper__sidebar {
+  align-self: stretch;
   transition: all 0.3s linear;
 }
 
@@ -80,8 +83,8 @@ button:hover img {
 }
 .sidebar {
   width: 282px;
-  background: #0c1245;
   height: 100%;
+  background: #0c1245;
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
@@ -815,6 +818,7 @@ button:hover img {
   padding: 15px 22px 17px 14px;
 }
 .infor .container .infor__box--right .box__right--container p {
+  cursor: pointer;
   margin: 0 0 16px 0;
   font-weight: 700;
   font-size: 16px;
@@ -991,7 +995,9 @@ footer .footer-container .footer__box--hidden {
   .sidebar {
     z-index: 2;
     width: 40vw;
-    height: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    position: fixed;
   }
   .sidebar__logo {
     width: 40vw;
@@ -1005,6 +1011,9 @@ footer .footer-container .footer__box--hidden {
     width: 30vw;
   }
   .coating {
+    position: absolute;
+    right: 0;
+    height: 100%;
     width: 60vw;
     background-color: black;
     z-index: 3;
@@ -1489,7 +1498,9 @@ footer .footer-container .footer__box--hidden {
   .sidebar {
     z-index: 2;
     width: 60vw;
-    height: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    position: fixed;
   }
   .sidebar__logo {
     width: 60vw;
@@ -1503,6 +1514,9 @@ footer .footer-container .footer__box--hidden {
     width: 40vw;
   }
   .coating {
+    position: absolute;
+    right: 0;
+    height: 100%;
     width: 40vw;
     background-color: black;
     z-index: 2;

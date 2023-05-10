@@ -29,15 +29,15 @@ function hiddenOptionGames() {
 function openSlideBar() {
   let sidebar = document.getElementById("sidebar");
   let coating = document.getElementById("sidebar-coating");
-  let wrapperSidebar = document.getElementById("wrapper__sidebar");
+  // let wrapperSidebar = document.getElementById("wrapper__sidebar");
   if (sidebar.className === "sidebar") {
     sidebar.className = "sidebar-show";
     coating.className += " hidden";
-    wrapperSidebar.style.height = "0";
+    // wrapperSidebar.style.height = "0";
   } else {
     sidebar.className = "sidebar";
     coating.className = "coating";
-    wrapperSidebar.style.height = "100%";
+    // wrapperSidebar.style.height = "100%";
   }
 }
 //Action clink header__tab
@@ -81,16 +81,16 @@ function showMore(id) {
   let x = document.getElementById(id);
   let coating = document.getElementById("coating");
   let contentShow = document.getElementById("content-showmore");
-  let showContent=document.getElementById("show-more-content")
+  let showContent = document.getElementById("show-more-content");
   if (x.className === "intro__show-more") {
     coating.style.display = "none";
     x.className += " appear";
-    showContent.innerText="Show less"
+    showContent.innerText = "Show less";
     document.getElementById("intro-content").style.height = "auto";
     document.getElementById("img-showmore").style.transform = "rotate(180deg)";
     contentShow.className += " full-content";
   } else {
-    showContent.innerText="Show more";
+    showContent.innerText = "Show more";
     x.className = "intro__show-more";
     coating.style.display = "block";
     contentShow.className = "content";
@@ -103,26 +103,26 @@ function showMore(id) {
 function appearMore(id) {
   let x = document.getElementById(id);
   let box = document.getElementById(id + "-box");
-  let contentBtn=document.getElementById(id+"-content")
+  let contentBtn = document.getElementById(id + "-content");
   if (x.className === "moreDetails") {
     x.className += " moreDetails-show";
     box.className += " box-hidden";
-    contentBtn.innerText="More Details"
+    contentBtn.innerText = "More Details";
   } else {
     x.className = "moreDetails";
     box.className = "box__right--hidden";
-    contentBtn.innerText="Less Details"
+    contentBtn.innerText = "Less Details";
   }
 }
 ///Action scroll
-function checkScroll(id) {
-  let element = document.getElementById(id);
-  const top = element.getBoundingClientRect().top.toFixed(); //distancetoTop
-  console.log(top);
-  if (top > 350 && top < 800) {
-    selectedScroll(id + "-r");
-  }
-}
+// function checkScroll(id) {
+//   let element = document.getElementById(id);
+//   const top = element.getBoundingClientRect().top.toFixed(); //distancetoTop
+//   console.log(top);
+//   if (top > 350 && top < 800) {
+//     selectedScroll(id + "-r");
+//   }
+// }
 function selectedScroll(id) {
   let x = document.getElementById(id);
   deleteSelectedScrooll("choose-title-r");
@@ -139,19 +139,34 @@ function deleteSelectedScrooll(id) {
 function scrollInfor() {
   const element = document.getElementById("infor__box--left");
   let y = element.scrollTop.toFixed();
-  console.log( "Vertically: " + y);
-  if(y<650){
-    selectedScroll( "choose-title-r");
-  }else if(y<1300){
-    selectedScroll( "criteria-title-r");
-  }else if(y<1900){
-    selectedScroll( "sort-title-r");
-  }else if(y<2800){
-    selectedScroll( "find-title-r");
-  }else{
-    selectedScroll( "filters-title-r");
+  console.log("Vertically: " + y);
+  if (y < 650) {
+    selectedScroll("choose-title-r");
+  } else if (y < 1300) {
+    selectedScroll("criteria-title-r");
+  } else if (y < 1800) {
+    selectedScroll("sort-title-r");
+  } else if (y < 2700) {
+    selectedScroll("find-title-r");
+  } else {
+    selectedScroll("filters-title-r");
   }
-
+}
+function selectTo(){
+  let id = event.target.id
+  const element = document.getElementById("infor__box--left");
+  console.log(event.target.id)
+  if(id==="choose-title-r"){
+    element.scrollTop=111
+  }else if(id==="criteria-title-r"){
+    element.scrollTop=667
+  }else if(id==="sort-title-r"){
+    element.scrollTop=1333
+  }else if(id==="find-title-r"){
+    element.scrollTop=1888
+  }else if(id==="filters-title-r"){
+    element.scrollTop=2777
+  }
 }
 ////////////////// Action hidden content
 function hiddenContent(id) {
